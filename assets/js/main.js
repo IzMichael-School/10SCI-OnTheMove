@@ -4,7 +4,7 @@ loadPages(pages)
 
 async function loadPages(arr) {
     arr.forEach(page => {
-        fetch('/pages/' + page + '.html')
+        fetch('./pages/' + page + '.html')
             .then(data => data.text())
             .then(html => process(html, page))
     });
